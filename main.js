@@ -24,8 +24,6 @@ function addTaskWithEnter() {
         if (event.key === "Enter") {
             event.preventDefault
             document.getElementById("addbtn").click();
-            
-            
         }
     })
 }
@@ -47,7 +45,6 @@ function createClosebutton() {
             var div = this.parentElement;
             div.style.display = "none";
         }
-        
     }
 }
 
@@ -60,7 +57,8 @@ function createCheckedbutton() {
         }
     }, false);
 }
-var taskcounter = -1;
 
+
+var taskcounter = -1;
 addTaskWithEnter();
 
