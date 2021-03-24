@@ -27,13 +27,16 @@ input {
     
     
 }
+input:hover {
+    background-color: lightcyan;
+}
 input::placeholder {
     text-decoration-color: black;
     color: black;
 }
 .addbutton {
     border:black;
-    color:black;
+    color:lightseagreen;
     padding: 10px;
     border-style: solid;
     border-radius: 80px / 80px;
@@ -42,8 +45,8 @@ input::placeholder {
     
 
 }
-.addbutton:focus {
-    background-color: darkcyan;
+.addbutton:hover {
+    background-color: black;
 }
 
 h2 {
@@ -51,7 +54,7 @@ h2 {
 }
 * {
     box-sizing:border-box;
-    box-shadow: lightsalmon;
+    
     background-color: lightcyan;
 }
 ul {
@@ -59,29 +62,39 @@ ul {
     padding:0vmax;
 }
 ul li {
-    padding: 12px 8px 12px 40px;
+    padding: 12px 2px 12px 40px;
     background: aliceblue;
     font-size: 18px;
     transition: 0.4s;
     position: relative;
+    border-style: ridge ridge ridge;
+    border-radius: 10px / 10px;
+    background-color:lightseagreen;
+    outline: none;
+    border-color: black;
 
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-ul li:hover(odd) {
+ul li:hover {
     background: brown;
 
 }
-ul li:checked {
-    background: cadetblue;
-    text-decoration: coral;
-    text-size-adjust: 30px;
+ul li.checked {
+    background: brown;
+    
 }
 .close {
-    position: absolute;
+    position:absolute;
     right: 0;
-    top: 0;
-    padding: 12px 16px 12px 16px;
+    top:0;
+    border-radius: 5px/5px;
+    color: lightseagreen;
+    padding: 12px 10px 12px 10px;
+
+}
+.close:hover {
+    background-color: black;
 }

@@ -7,9 +7,15 @@ function addTask() {
         alert("you must write something.")
     } else  {
         document.getElementById("todoul").appendChild(li);
+        taskcounter++;
+        console.log(taskcounter);
     }
 
-    document.getElementById("todoinput").value = "";
+    document.getElementById("todoinput").value = "Write another task...";
+    console.log(document.getElementById("todoinput").value)
+    createClosebutton();
+    createCheckedbutton();
+    
 }
 
 function addTaskWithEnter() {
@@ -18,8 +24,8 @@ function addTaskWithEnter() {
         if (event.key === "Enter") {
             event.preventDefault
             document.getElementById("addbtn").click();
-            createClosebutton();
-            clickClosebutton();
+            
+            
         }
     })
 }
@@ -27,16 +33,13 @@ function addTaskWithEnter() {
 function createClosebutton() {
     var mynodelist = document.getElementsByTagName("LI");
     var i;
-    for (let i = 0; i < mynodelist.length; i++) {
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
+    for (let i = taskcounter; i < mynodelist.length; i++) {
+        var span = document.createElement("closebutton");
+        var txt = document.createTextNode("x");
         span.className = "close";
         span.appendChild(txt);
         mynodelist[i].appendChild(span);
     }
-}
-
-function clickClosebutton() {
     var close = document.getElementsByClassName("close");
     var i;
     for (let i = 0; i < close.length; i++) {
@@ -47,6 +50,17 @@ function clickClosebutton() {
         
     }
 }
+
+
+function createCheckedbutton() {
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'li') {
+        ev.target.classList.toggle('checked');
+        }
+    }, false);
+}
+var taskcounter = -1;
+
 addTaskWithEnter();
-createClosebutton();
-clickClosebutton();
+
