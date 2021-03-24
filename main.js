@@ -11,10 +11,10 @@ function addTask() {
         console.log(taskcounter);
     }
 
-    document.getElementById("todoinput").value = "Write another task...";
+    document.getElementById("todoinput").value = "";
     console.log(document.getElementById("todoinput").value)
     createClosebutton();
-    createCheckedbutton();
+    
     
 }
 
@@ -50,15 +50,14 @@ function createClosebutton() {
 
 
 function createCheckedbutton() {
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'li') {
-        ev.target.classList.toggle('checked');
+    var list = document.querySelector("ul");
+    list.addEventListener("click", function(event) {
+        if (event.target.tagName === "LI") {
+            event.target.classList.toggle("checked");
         }
     }, false);
 }
 
-
 var taskcounter = -1;
 addTaskWithEnter();
-
+createCheckedbutton();
