@@ -4,24 +4,16 @@ h1 {
 .header {
     color:darkcyan;
     text-align: center;
-
 }
 input {
     
     border-style: ridge ridge ridge;
     border-radius: 80px / 80px;
     padding: 10px;
-    animation: cubic-bezier();
-    outline-color: lightseagreen;
     border-color: black;
-    caret-color: black;
     color: black;
-    flood-color: black;
-    lighting-color: black;
     background-color:lightseagreen;
     text-decoration-color: black;
-    align-self: stretch;
-    text-emphasis-color: black;
     outline: none;
 
     
@@ -78,13 +70,12 @@ ul li {
     -ms-user-select: none;
     user-select: none;
 }
-ul li:hover {
-    background: brown;
-
-}
 ul li.checked {
     background: brown;
     
+}
+ul li. {
+    background: lightseagreen;
 }
 .close {
     position:absolute;
