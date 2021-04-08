@@ -32,13 +32,13 @@ function createClosebutton() {
     var mynodelist = document.getElementsByTagName("LI");
     var i;
     for (let i = taskcounter; i < mynodelist.length; i++) {
-        var span = document.createElement("closebutton");
-        var txt = document.createTextNode("x");
-        span.className = "close";
+        var span = document.createElement("buttonicon");
+        var txt = document.createTextNode(" ");
+        span.className = "closeicon";
         span.appendChild(txt);
         mynodelist[i].appendChild(span);
     }
-    var close = document.getElementsByClassName("close");
+    var close = document.getElementsByClassName("closeicon");
     var i;
     for (let i = 0; i < close.length; i++) {
         close[i].onclick = function() {

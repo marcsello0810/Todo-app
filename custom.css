@@ -1,26 +1,23 @@
 h1 {
-    color: lightseagreen;
+    color: #000000;
 }
 .header {
-    color:darkcyan;
+    color:#D3FBD8;
     text-align: center;
 }
 input {
     
     border-style: ridge ridge ridge;
-    border-radius: 80px / 80px;
-    padding: 10px;
+    border-radius: 10px / 10px;
+    border-width: 2px;
     border-color: black;
+    padding: 10px;
     color: black;
-    background-color:lightseagreen;
-    text-decoration-color: black;
+    background-color:#D3FBD8;
     outline: none;
-
-    
-    
 }
 input:hover {
-    background-color: lightcyan;
+    background-color: #FFF3FA;
 }
 input::placeholder {
     text-decoration-color: black;
@@ -28,10 +25,11 @@ input::placeholder {
 }
 .addbutton {
     border:black;
-    color:lightseagreen;
+    color:black;
     padding: 10px;
     border-style: solid;
-    border-radius: 80px / 80px;
+    border-radius: 10px / 10px;
+    border-width: 2px;
     outline: none;
     
     
@@ -39,15 +37,15 @@ input::placeholder {
 }
 .addbutton:hover {
     background-color: black;
+    color:#FFF3FA;
 }
-
 h2 {
     text-align: center;
 }
 * {
     box-sizing:border-box;
-    
-    background-color: lightcyan;
+    font-family: "CustomFont";
+    background-color: #FFF3FA;
 }
 ul {
     margin:0rem;
@@ -55,37 +53,64 @@ ul {
 }
 ul li {
     padding: 12px 2px 12px 40px;
-    background: aliceblue;
-    font-size: 18px;
+    margin: 2px;
+    font-size: 20px;
     transition: 0.4s;
     position: relative;
-    border-style: ridge ridge ridge;
+    border-style:solid;
+    border-width: 2px;
     border-radius: 10px / 10px;
-    background-color:lightseagreen;
-    outline: none;
     border-color: black;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-ul li.checked {
-    background: brown;
+    background-color:#D3FBD8;
+    outline: none;
     
 }
-ul li. {
-    background: lightseagreen;
+ul li.checked {
+    background: #ED5E93;
+    color: #FFF3FA;
+    text-decoration-line: line-through;
+    
 }
 .close {
     position:absolute;
     right: 0;
     top:0;
-    border-radius: 5px/5px;
-    color: lightseagreen;
+    background: none;
+    border: none;
+    color: #D3FBD8;
     padding: 12px 10px 12px 10px;
+    width: 50px;
+}
+.closeicon {
+    position:absolute;
+    right: 0;
+    top:0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin-top: 11px;
+    margin-right: 7px;
+    background: none;
+    border:none;
+    cursor: pointer;
+    
 
+    
 }
-.close:hover {
-    background-color: black;
+.closeicon:before {
+    content: url(close_svg.svg);
+
+    float: left;
 }
+
+.attribute {
+    position: fixed;
+    text-align:end;
+    bottom: 0cm;
+}
+@font-face {
+    font-family: "CustomFont";
+    src: url("./fonts/newtegomin-regular-webfont.woff");
+    src: url("./fonts/newtegomin-regular-webfont.woff") format("woff");
+    }
